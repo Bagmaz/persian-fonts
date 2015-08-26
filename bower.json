@@ -1,0 +1,17 @@
+{
+  "name": "persian-fonts",
+  "version": "1.0",
+  "homepage": "https://github.com/ravaj-group/persian-fonts",
+  "authors": [
+    "Morteza Motiee <morteza.motiee@gmail.com>"
+  ],
+  "description": "Bower package of a set of standard Persian fonts for web. http://scict.ir",
+  "main": "css/persian-fonts.css",
+  "keywords": [
+    "font",
+    "font-face",
+    "persian",
+    "iran"
+  ],
+  "license": "MIT"
+}
