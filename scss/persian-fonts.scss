@@ -1,0 +1,55 @@
+/*!
+ *  Persian Fonts 1.0 by @morteza-motiee - http://ravaj.ir
+ *  License : Font: MIT License, CSS: MIT License
+ */
+
+$persian-fonts-path:        "../fonts/" !default;
+
+@mixin persian-fontface($fname, $hasbold, $hasitalic) {
+  @font-face {
+    font-family: $fname;
+    src: url($persian-fonts-path + $fname +'.eot');
+    src: url($persian-fonts-path + $fname +'.eot?#iefix&v=1.0') format('embedded-opentype'),
+    url($persian-fonts-path + $fname +'.woff') format('woff'),
+    url($persian-fonts-path + $fname +'.ttf') format('truetype'),
+    url($persian-fonts-path + $fname +'.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @if $hasbold {
+    @font-face {
+      font-family: $fname;
+      src: url($persian-fonts-path + $fname +'Bold.eot');
+      src: url($persian-fonts-path + $fname +'Bold.eot?#iefix&v=1.0') format('embedded-opentype'),
+      url($persian-fonts-path + $fname + 'Bold.woff') format('woff'),
+      url($persian-fonts-path + $fname + 'Bold.ttf') format('truetype'),
+      url($persian-fonts-path + $fname + 'Bold.svg') format('svg');
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+  @if $hasitalic {
+    @font-face {
+      font-family: $fname;
+      src: url($persian-fonts-path + $fname + 'Iranic.eot');
+      src: url($persian-fonts-path + $fname + 'Iranic.eot?#iefix&v=1.0') format('embedded-opentype'),
+      url($persian-fonts-path + $fname + 'Iranic.woff') format('woff'),
+      url($persian-fonts-path + $fname + 'Iranic.ttf') format('truetype'),
+      url($persian-fonts-path + $fname + 'Iranic.svg') format('svg');
+      font-weight: normal;
+      font-style: italic, oblique;
+    }
+  }
+}
+
+@include persian-fontface('IRBadr', true, true);
+@include persian-fontface('IRCompset', true, true);
+@include persian-fontface('IRLotus', true, true);
+@include persian-fontface('IRMitra', true, true);
+@include persian-fontface('IRNazanin', true, true);
+@include persian-fontface('IRRoya', true, true);
+@include persian-fontface('IRTerafik', true, true);
+@include persian-fontface('IRTitr', false, false);
+@include persian-fontface('IRYakout', true, true);
+@include persian-fontface('IRYekan', true, false);
+@include persian-fontface('IRZar', true, true);
